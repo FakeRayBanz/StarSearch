@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+:root {
+  --button-accent: rgb(157, 157, 157);
+  --button-background: rgb(220, 220, 220);
+  --section-background: rgb(88, 88, 88);
+  --nav-background: rgb(68, 68, 68);
+  --starwars-background: rgb(4, 4, 4);
+  --searchbar-background: rgb(62, 62, 62);
+  --searchbarfocus-background: rgb(0, 3, 191);
+  --searchbar-text: aliceblue;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  background-color: var(--starwars-background);
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px;
+  border-width: 3.5px;
+  background-color: var(--starwars-background);
+  color: var(--searchbar-text);
+  border-color: var(--searchbar-text);
+  border-style: solid;
+  transition: 80ms ease-in-out background-color;
 }
-
-.App-header {
-  background-color: #282c34;
+button:active {
+  background-color: var(--button-accent);
+  transition: 80ms ease-in-out background-color;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+main {
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 32px;
+  background-color: var(--nav-background);
+  color: aliceblue;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+a {
+  color: var(--primary-background);
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: 300ms ease-in-out color;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-accent);
+}
+nav a {
+  padding: 20px;
+}
+.button-group button {
+  margin: 4px;
+  width: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+#searchbar {
+  display: flex;
+  border-radius: 20px;
+  min-width: 50px;
+  width: 95%;
+  height: 40px;
+  max-width: 480px;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  border-width: 3.5px;
+  background-color: var(--starwars-background);
+  border-color: var(--searchbar-text);
+  border-style: solid;
+  transition: 200ms ease-in-out background-color;
+  color: var(--searchbar-text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#searchbar:focus {
+  background-color: var(--searchbar-background);
+  transition: 200ms ease-in-out background-color;
+  outline: none;
+  caret-color: var(--searchbar-text);
+  color: var(--searchbar-text);
+}
+
+#starwarsimage {
+  width: 95%;
+  max-width: 480px;
+  height: auto;
+  margin: 20px;
 }
