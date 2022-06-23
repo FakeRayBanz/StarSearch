@@ -47,7 +47,6 @@ main {
 }
 nav {
   display: flex;
-  z-index: 1;
   justify-content: flex-end;
   padding-right: 32px;
   background-color: var(--nav-background);
@@ -73,7 +72,6 @@ nav a {
   margin: 4px;
   width: 100px;
   cursor: pointer;
-  z-index: 2;
 }
 
 #Hyperdrive {
@@ -89,7 +87,6 @@ nav a {
 
 #searchbar {
   display: flex;
-  z-index: 1;
   border-radius: 20px;
   min-width: 50px;
   width: 95%;
@@ -120,5 +117,4 @@ nav a {
   max-width: 480px;
   height: auto;
   margin: 20px;
-  z-index: 1;
 }
