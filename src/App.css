@@ -3,14 +3,13 @@
   --button-accent: rgb(157, 157, 157);
   --button-background: rgb(220, 220, 220);
   --section-background: rgb(88, 88, 88);
-  --nav-background: rgb(68, 68, 68);
+  --nav-background: rgba(68, 68, 68, 0.9);
   --starwars-background: rgb(4, 4, 4);
   --searchbar-background: rgb(62, 62, 62);
   --searchbarfocus-background: rgb(0, 3, 191);
   --searchbar-text: aliceblue;
 }
 section {
-  background-color: var(--starwars-background);
   flex-direction: column;
   display: flex;
   flex-grow: 1;
@@ -48,12 +47,14 @@ main {
 }
 nav {
   display: flex;
+  z-index: 1;
   justify-content: flex-end;
   padding-right: 32px;
   background-color: var(--nav-background);
   color: aliceblue;
   flex-shrink: 0;
   flex-grow: 0;
+  backdrop-filter: blur(100px);
 }
 a {
   color: var(--primary-background);
@@ -72,10 +73,23 @@ nav a {
   margin: 4px;
   width: 100px;
   cursor: pointer;
+  z-index: 2;
+}
+
+#Hyperdrive {
+  left: 0px;
+  top: 0px;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 200ms ease-in-out all;
 }
 
 #searchbar {
   display: flex;
+  z-index: 1;
   border-radius: 20px;
   min-width: 50px;
   width: 95%;
@@ -106,4 +120,5 @@ nav a {
   max-width: 480px;
   height: auto;
   margin: 20px;
+  z-index: 1;
 }
